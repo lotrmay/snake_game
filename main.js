@@ -50,7 +50,7 @@ app.listen(process.env.PORT || 3000, () => {
 
 app.get('/', (req, res) => {
   refresh();
-  setTimeout(function(){  res.sendFile(path.join(__dirname, '../top_secret', 'index.html')); }, 1000);
+  setTimeout(function(){  res.sendFile(path.join(__dirname, 'index.html')); }, 1000);
 });
 
 app.post('',urlencodedParser, function(req,res) {
@@ -60,5 +60,5 @@ app.post('',urlencodedParser, function(req,res) {
       console.log("1 record inserted");
     });
     refresh();
-    setTimeout(function(){  res.sendFile(path.join(__dirname, '../top_secret', 'index.html')); }, 1000);
+    setTimeout(function(){  res.sendFile(path.join(__dirname, 'index.html')); }, 1000);
 });
